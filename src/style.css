@@ -1,0 +1,101 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  position: absolute;
+  bottom: env(safe-area-inset-bottom);
+  left: 0;
+  right: 0;
+  top: env(safe-area-inset-top);
+  margin-bottom: 3.2em;
+  overflow: auto;
+}
+@font-face {
+  font-family: "Material Icons Round";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Material-Icons-Round.woff2") format("woff2");
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.material-icons-round {
+  font-family: "Material Icons Round";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  margin: 0;
+  overflow: hidden;
+  background-color: var(--primaryBg);
+}
+.container {
+  margin: 8px 8px 80px 8px;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.shimmer {
+  min-height: 1.3rem;
+  min-width: 1.3rem;
+  background: grey;
+  border-radius: 0.5rem;
+  opacity: 0.1;
+  margin: 0.2rem;
+  position: relative;
+  overflow: hidden;
+}
+.shimmer:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #ccc, #ccc, transparent);
+  animation: shimmer 2s linear infinite;
+}
+@keyframes shimmer {
+  0% {
+    left: -400px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.d-flex {
+  display: flex;
+}
+.col {
+  flex-direction: column;
+}
+.f-1 {
+  flex: 1;
+}
+.f-top {
+  justify-content: flex-start;
+}
+.f-center {
+  justify-content: center;
+}
+.f-bottom {
+  justify-content: flex-end;
+}
+.f-left {
+  align-items: flex-start;
+}
+.f-right {
+  align-items: flex-end;
+}
