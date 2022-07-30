@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       page: "home",
-      count: 0,
+      count: 1,
     };
   },
   components: {
